@@ -37,9 +37,9 @@ use neqo_crypto::random;
 /// If the path doesn't support this MTU, we will assume that it doesn't support QUIC.
 ///
 /// This is a multiple of 16 greater than the largest possible short header (1 + 20 + 4).
-pub const PATH_MTU_V6: usize = 1337;
+pub const PATH_MTU_V6: usize = 1500;
 /// The path MTU for IPv4 can be 20 bytes larger than for v6.
-pub const PATH_MTU_V4: usize = PATH_MTU_V6 + 20;
+pub const PATH_MTU_V4: usize = PATH_MTU_V6;
 /// The number of times that a path will be probed before it is considered failed.
 const MAX_PATH_PROBES: usize = 3;
 /// The maximum number of paths that `Paths` will track.

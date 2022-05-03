@@ -19,8 +19,8 @@ use std::convert::TryFrom;
 use std::rc::Rc;
 use test_fixture::now;
 
-const DATAGRAM_LEN_MTU: u64 = 1310;
-const DATA_MTU: &[u8] = &[1; 1310];
+const DATAGRAM_LEN_MTU: u64 = 1500;
+const DATA_MTU: &[u8] = &[1; 1500];
 const DATA_BIGGER_THAN_MTU: &[u8] = &[0; 2620];
 const DATAGRAM_LEN_SMALLER_THAN_MTU: u64 = 1200;
 const DATA_SMALLER_THAN_MTU: &[u8] = &[0; 1200];
