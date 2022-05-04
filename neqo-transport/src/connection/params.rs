@@ -17,7 +17,7 @@ use std::cmp::max;
 use std::convert::TryFrom;
 use std::time::Duration;
 
-const LOCAL_MAX_DATA: u64 = 0x3FFF_FFFF_FFFF_FFFF; // 2^62-1
+const LOCAL_MAX_DATA: u64 = 0x100000; // 2^62-1 ==> 1048576
 const LOCAL_STREAM_LIMIT_BIDI: u64 = 16;
 const LOCAL_STREAM_LIMIT_UNI: u64 = 16;
 /// See `ConnectionParameters.ack_ratio` for a discussion of this value.

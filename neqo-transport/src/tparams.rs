@@ -358,7 +358,7 @@ impl TransportParameters {
             | MAX_DATAGRAM_FRAME_SIZE => 0,
             MAX_UDP_PAYLOAD_SIZE => 65527,
             ACK_DELAY_EXPONENT => 3,
-            MAX_ACK_DELAY => 25,
+            MAX_ACK_DELAY => 20,
             ACTIVE_CONNECTION_ID_LIMIT => 2,
             _ => panic!("Transport parameter not known or not an Integer"),
         };
@@ -767,7 +767,7 @@ mod tests {
 
         println!("TPS = {:?}", tps);
         assert_eq!(tps2.get_integer(IDLE_TIMEOUT), 0); // Default
-        assert_eq!(tps2.get_integer(MAX_ACK_DELAY), 25); // Default
+        assert_eq!(tps2.get_integer(MAX_ACK_DELAY), 20); // Default
         assert_eq!(tps2.get_integer(ACTIVE_CONNECTION_ID_LIMIT), 2); // Default
         assert_eq!(tps2.get_integer(INITIAL_MAX_STREAMS_BIDI), 10); // Sent
         assert_eq!(tps2.get_bytes(STATELESS_RESET_TOKEN), Some(RESET_TOKEN));
